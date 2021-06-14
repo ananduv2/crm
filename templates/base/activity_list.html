@@ -1,0 +1,13 @@
+<h1>Activities</h1>
+<table>
+    <tr>
+        <th>Activity List</th>
+    </tr>
+    {% for activity in activities %}
+    <tr>
+        <td>
+            {{activity.title}}
+        </td>
+    </tr>
+    {% endfor %}
+</table>

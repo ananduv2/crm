@@ -7,8 +7,19 @@ from django.urls import reverse_lazy
 
 from .models import Activity
 # Create your views here.
+
+
+#Class to list all activities
 class ActivityList(ListView):
     model = Activity
     context_object_name = 'activities'
+
+
+#Class to update an activity
+class ActivityUpdate(UpdateView):
+    model = Activity
+    fields = '__all__'
+    success_url = reverse_lazy('activities')
+    template_name = 'base/edit.html'
 
 

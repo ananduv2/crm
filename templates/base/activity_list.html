@@ -8,6 +8,9 @@
         <td>
             {{activity.title}}
         </td>
+        <td>
+            <a href="{% url 'activityupdate' activity.id %}">Edit</a>
+        </td>
     </tr>
     {% endfor %}
 </table>

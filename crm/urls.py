@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',baseview.ActivityList.as_view(),name='activities'),
     path('activity/edit/<int:pk>/',baseview.ActivityUpdate.as_view(),name='activityupdate'),
+    path('activity/create/',baseview.ActivityCreate.as_view(),name='activitycreate'),
 ]

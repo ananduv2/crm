@@ -22,4 +22,12 @@ class ActivityUpdate(UpdateView):
     success_url = reverse_lazy('activities')
     template_name = 'base/edit.html'
 
+#Class to create new activity
+class ActivityCreate(CreateView):
+    model = Activity
+    fields = ['title', 'description', 'complete']
+    success_url = reverse_lazy('activities')
+    template_name = 'base/create.html'
+    
+
 
